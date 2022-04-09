@@ -11,6 +11,15 @@ def main():
     mentiURL = getMentiURL(id)
     json = requests.get(mentiURL, headers=headers).json()
 
+    #Error handling
+    if response.status_code == 404:
+        print("Possible expired MentiMeter key")
+        return
+    elif response.status_code != 200:
+        print("Unknown Error")
+        return
+    
+    json = response.json()
     jsonParser = json_parser.JsonParser(json)
     images = jsonParser.getImages()
 
