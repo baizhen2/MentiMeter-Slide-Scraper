@@ -9,7 +9,7 @@ headers = {
 def main():
     id = input("Enter MentiMeter code: ")
     mentiURL = getMentiURL(id)
-    json = requests.get(mentiURL, headers=headers).json()
+    response = requests.get(mentiURL, headers=headers)
 
     #Error handling
     if response.status_code == 404:
@@ -23,15 +23,19 @@ def main():
     jsonParser = json_parser.JsonParser(json)
     images = jsonParser.getImages()
 
-    os.makedirs(r'../menti_slides/' + jsonParser.getPresentationName())
+    makeFolders(jsonParser.getPresentationName())
 
 
 def getMentiURL(id):
     return "https://www.menti.com/core/vote-ids/" + id.replace(" ", "") + "/series"
 
-if __name__=="__main__":
-    newpath = r'../menti_slides' 
+def makeFolders(presentationName):
+    newpath = r'../menti_slides/' 
     if not os.path.exists(newpath):
         os.makedirs(newpath)
-        
+
+    os.makedirs(newpath + presentationName)
+
+
+if __name__=="__main__":
     main()
