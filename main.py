@@ -23,7 +23,10 @@ def main():
     jsonParser = json_parser.JsonParser(json)
     images = jsonParser.getImages()
 
-    makeFolders(jsonParser.getPresentationName())
+    dstFolderName = makeFolders(jsonParser.getPresentationName())
+
+    for image in images:
+        image.downloadImage(dstFolderName + "/")
 
 
 def getMentiURL(id):
@@ -34,7 +37,10 @@ def makeFolders(presentationName):
     if not os.path.exists(newpath):
         os.makedirs(newpath)
 
-    os.makedirs(newpath + presentationName)
+    dstFolder = newpath + presentationName
+    os.makedirs(dstFolder)
+
+    return dstFolder
 
 
 if __name__=="__main__":
