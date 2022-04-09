@@ -8,7 +8,7 @@ class Json:
     def __init__(self, jsonObject):
         self.json = jsonObject
 
-    def getImageURLs(self):
+    def getImages(self):
         urls = []
 
         return urls
