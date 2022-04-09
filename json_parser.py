@@ -20,3 +20,5 @@ class JsonParser:
                 images.append(newImage)
         return images
     
+    def getPresentationName(self):
+        return self.json["name"]
