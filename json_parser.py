@@ -15,7 +15,7 @@ class JsonParser:
 
         for q in self.json["questions"]:
             if (q["question_image_url"] != None):
-                newImage = image.Image(q["question_image_url"], q["slug"] + "-slide" + str(slideCounter))
+                newImage = image.Image(q["question_image_url"], "slide" + str(slideCounter) + "-" + q["slug"])
                 slideCounter += 1
                 images.append(newImage)
         return images
