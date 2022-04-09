@@ -3,7 +3,7 @@
 import json
 import json
 
-class Json:
+class JsonParser:
 
     def __init__(self, jsonObject):
         self.json = jsonObject
