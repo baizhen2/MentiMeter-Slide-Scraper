@@ -1,7 +1,3 @@
-# https://www.menti.com/core/vote-ids/9017332/series
-
-import json
-import json
 import image
 
 class JsonParser:
