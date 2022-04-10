@@ -33,7 +33,7 @@ def getMentiURL(id):
     return "https://www.menti.com/core/vote-ids/" + id.replace(" ", "") + "/series"
 
 def makeFolders(presentationName):
-    newpath = r'../menti_slides/' 
+    newpath = r'./menti_slides/' 
     if not os.path.exists(newpath):
         os.makedirs(newpath)
 
