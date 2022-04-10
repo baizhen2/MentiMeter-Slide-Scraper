@@ -1,0 +1,8 @@
+version: "3.9"
+services:
+  app:
+    build: .
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./menti_slides/:/MentiMeter-Slide-Scraper/menti_slides/
