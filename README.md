@@ -25,9 +25,9 @@ We are making use of docker to run the application
  - If you are in the right directory you can now run ```docker-compose build```
  - On MacOS/Linux you might encounter a permission error with docker.sock, in this case run ```sudo docker-compose build```, this will prompt for your password
  - If the above commands are successfully you will see docker building the image
-<img width="659" alt="build" src="https://user-images.githubusercontent.com/62679957/162652226-2c89d119-6980-45d0-83de-7dd72afc40ae.png">
+ - <img width="659" alt="build" src="https://user-images.githubusercontent.com/62679957/162652226-2c89d119-6980-45d0-83de-7dd72afc40ae.png">
  - You can now run the application using ```docker-compose run app``` or for MacOS/Linux ```sudo docker-compose run app```
-<img width="611" alt="run-app" src="https://user-images.githubusercontent.com/62679957/162652274-4e76f4da-ee56-4d0c-96df-98dc5c68f428.png">
+ - <img width="611" alt="run-app" src="https://user-images.githubusercontent.com/62679957/162652274-4e76f4da-ee56-4d0c-96df-98dc5c68f428.png">
  - The final result is the application prompting for the MentiMeter key, which is the same code your teacher/professor puts up for you to join the presentation
  - The images will then be downloaded to a newly created folder called ```menti_slides```
  - If you need to rerun the program use ```docker-compose run app``` or for MacOS/Linux ```sudo docker-compose run app``` as you won't need to rebuild it
