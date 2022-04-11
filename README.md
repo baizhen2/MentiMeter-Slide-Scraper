@@ -32,6 +32,7 @@ We are making use of docker to run the application
  - The images will then be downloaded to a newly created folder called ```menti_slides```
  - If you need to rerun the program use ```docker-compose run app``` or for MacOS/Linux ```sudo docker-compose run app``` as you won't need to rebuild it
 
+
 ***Images are just normal files without a type!?!***
  - Some images from the slides might be a .jpeg type, which in some cases Windows cannot recognize 
  - For these files you will need to convert them to a .jpg type, which can be done using a converter found online
