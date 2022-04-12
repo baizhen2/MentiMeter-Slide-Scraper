@@ -37,6 +37,7 @@ We are making use of docker to run the application
  - Some images from the slides might be a .jpeg type, which in some cases Windows cannot recognize 
  - For these files you will need to convert them to a .jpg type, which can be done using a converter found online
  - Google ```jpeg to jpg converter``` and you will find tons of them
+ - Update 4/12 - Uploading the folder full of images to google drive is a faster way to view all of the files, instead of individually converting each
 
 ## Improvements 
 More automation!!!
